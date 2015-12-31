@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<!--
+	   RULES for logging DEBUG < INFO < WARN < ERROR < FATAL.
+          log4j.xml的优先级比log4j.properties高。
+-->
+  <!-- DRFile Appender -->
+   <appender name="DRFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/equip.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+  		     <param name="ConversionPattern"
+                           value="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+		</layout>
+   </appender>
+
+   
+
+      <!-- CONSOLE Appender -->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+	<param name="Target" value="System.out"/>
+	
+	<layout class="org.apache.log4j.PatternLayout">
+	<param name="ConversionPattern" value="%d  %-5p [%c{1}] %m%n"/>
+	</layout>
+	</appender>
+
+
+  <root>
+    <priority value="info"/>
+
+    <appender-ref ref="DRFile"/>
+    <appender-ref ref="CONSOLE"/>
+
+   <!-- 如果需要写到数据库 ，remove comonet,并修改jdbc appender的driver,url,sa,pwd
+    <appender-ref ref="JDBC"/>
+    <appender-ref ref="CONSOLE"/>
+   -->
+
+  </root>
+
+</log4j:configuration>

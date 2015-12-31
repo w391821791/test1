@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 设置上传文件的临时文件夹,默认使用javax.servlet.context.tempdir -->
+	<constant name="struts.multipart.saveDir " value="d:/tmp" />
+	<package name="edu_equip" extends="json-default" namespace="/">
+		<action name="UserExcel_*" class="com.zty.edu_equip.action.UserExcelAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="excel">excel.jsp</result>
+			<result name="excelHistoryAsset">excelHistoryAsset.jsp</result>
+			<result name="excelInputHistory">excelInputHistory.jsp</result>
+		</action>
+		<action name="ReportForm_*" class="com.zty.edu_equip.action.ReportFormAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="reportFormInstrument">reportFormInstrument.jsp</result>
+			<result name="reportFormEquip">reportFormEquip.jsp</result>
+			<result name="reportFormToRoom">reportFormToRoom.jsp</result>
+		</action>
+		<action name="Util_*" class="com.zty.edu_equip.action.UtilAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="login">login.jsp</result>
+		</action>
+		<action name="User_*" class="com.zty.edu_equip.action.UserAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="add">userAdd.jsp</result>
+			<result name="edit">userEdit.jsp</result>
+			<result name="list">userList.jsp</result>
+		</action>
+		<action name="Room_*" class="com.zty.edu_equip.action.RoomAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="save">roomSave.jsp</result>
+			<result name="list">roomList.jsp</result>
+		</action>
+		<action name="Equip_*" class="com.zty.edu_equip.action.EquipAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="equipLists">equipLists.jsp</result>
+			<result name="equipList">equiplistw.jsp</result>
+			<result name="equipUse">equipUse.jsp</result>
+			<result name="equipView">equipView.jsp</result>
+			<result name="inEquip">inEquip.jsp</result>
+			<result name="inInstrument">inInstrument.jsp</result>
+			<result name="lableEquip">lableEquip.jsp</result>
+			<result name="excelImport">excelImport.jsp</result>
+		</action>
+		<action name="EquipLabel_*" class="com.zty.edu_equip.action.EquipLabelAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="Moblie_*" class="com.zty.edu_equip.moblie.MoblieAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="Standard_*" class="com.zty.edu_equip.action.StandardAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="standard">standard.jsp</result>
+		</action>
+		<action name="Move_*" class="com.zty.edu_equip.action.MoveAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="moveList">moveList.jsp</result>
+			<result name="moveSave">moveSave.jsp</result>
+		</action>
+		<action name="Audit_*" class="com.zty.edu_equip.action.AuditAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="auditList">auditList.jsp</result>
+			<result name="auditMove">auditMove.jsp</result>
+			<result name="auditDispose">auditDispose.jsp</result>
+		</action>
+		<action name="Dispose_*" class="com.zty.edu_equip.action.DisposeAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="disposeList">disposeList.jsp</result>
+			<result name="disposeAdd">disposeAdd.jsp</result>
+			<result name="disposeEquip">disposeEquip.jsp</result>
+			<result name="equiplistw">equiplistw.jsp</result>
+		</action>
+		<action name="Purchase_*" class="com.zty.edu_equip.action.PurchaseAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="purchaseList">purchaseList.jsp</result>
+			<result name="purchaseAdd">purchaseAdd.jsp</result>
+		</action>
+		<action name="Inventory_*" class="com.zty.edu_equip.action.InventoryAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="list">inventoryList.jsp</result>
+			<result name="add">inventoryAdd.jsp</result>
+		</action>
+		<action name="OrganManage_*" class="com.zty.edu_equip.action.OrganManageAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="organList">organList.jsp</result>
+			<result name="changeOrgan">changeOrgan.jsp</result>
+		</action>
+		
+		<action name="Redirect_*" class="com.zty.edu_equip.action.RedirectAction"
+			method="{1}">
+			<result type="json">
+				<param name="root">map</param>
+			</result>
+			<result name="login">jsp/loginR.jsp</result>
+			<result name="error">jsp/Rerror.jsp</result>
+			<result name="changeOrgan">changeOrgan.jsp</result>
+		</action>
+	</package>
+</struts>    

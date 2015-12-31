@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="gb2312"?>
+<cfg>
+	<attr name="JndiName4Main" value="JDBC/EDU_EQUIP" on-off="on" />
+	<!--TOMCAT连接数据库识别标志 <attr name="JndiName4Main" value="JDBC/ASSET_NSJY" on-off="on" 
+		/> -->
+	<attr name="AppApkFilePath"
+		value="D:\HbuilderProject\edu_equip\unpackage\release\H5F5AD68F.wgt"
+		on-off="on" />
+	<attr name="AppVersion" value="1" on-off="on" />
+	<!--文件服务器 -->
+	<attr name="FileServerPath" value="D:\FileServer\edu_equip"
+		on-off="on" />
+	<group name="permcode" on-off="on">
+		<attr name="P_ROOM" value="房间管理" on-off="on" />
+		<attr name="P_PURCHASE" value="入库管理" on-off="on" />
+		<attr name="P_ORGAN" value="学校管理" on-off="on" />
+		<attr name="P_EQUIP" value="装备管理" on-off="on" />
+		<attr name="P_MOVE" value="装备转移" on-off="on" />
+		<attr name="P_AUDIT" value="意见审核" on-off="on" />
+		<attr name="P_INVENTORY" value="装备盘点" on-off="on" />
+		<attr name="P_DISPOSE" value="装备处置" on-off="on" />
+		<attr name="P_STAND" value="标准法规" on-off="on" />
+		<attr name="P_FORM" value="统计报表" on-off="on" />
+		<attr name="P_USER" value="用户管理" on-off="on" />
+		<attr name="P_MOBILE" value="手机登录" on-off="on" />
+	</group>
+	<group name="permmison" on-off="on">
+		<attr name="Util*" value="P_UTIL" on-off="on" />
+		<attr name="Room*" value="P_ROOM" on-off="on" />
+		<attr name="Purchase*" value="P_PURCHASE" on-off="on" />
+		<attr name="Organ*" value="P_ORGAN" on-off="on" />
+		<attr name="Equip*" value="P_EQUIP" on-off="on" />
+		<attr name="Move*" value="P_MOVE" on-off="on" />
+		<attr name="Audit*" value="P_AUDIT" on-off="on" />
+		<attr name="Inventory*" value="P_INVENTORY" on-off="on" />
+		<attr name="Dispose*" value="P_DISPOSE" on-off="on" />
+		<attr name="Stand*" value="P_STAND" on-off="on" />
+		<attr name="ReportForm*" value="P_FORM" on-off="on" />
+		<attr name="User*" value="P_USER" on-off="on" />
+		<attr name="Moblie*" value="P_MOBILE" on-off="on" />
+	</group>
+	<group name="role_permmison" on-off="on">
+		<attr name="R_SCHOOL"
+			value="P_UTIL,P_ROOM,P_PURCHASE,P_EQUIP,P_MOVE,P_INVENTORY,P_AUDIT,P_DISPOSE,P_STAND,P_FORM"
+			on-off="on" />
+		<attr name="R_SCHOOL_VIP"
+			value="P_UTIL,P_ROOM,P_PURCHASE,P_ORGAN,P_EQUIP,P_MOVE,P_INVENTORY,P_AUDIT,P_DISPOSE,P_STAND,P_FORM,P_USER"
+			on-off="on" />
+		<attr name="R_NS"
+			value="P_UTIL,P_ROOM,P_PURCHASE,P_ORGAN,P_EQUIP,P_MOVE,P_INVENTORY,P_AUDIT,P_DISPOSE,P_STAND,P_FORM"
+			on-off="on" />
+	</group>
+	<!-- 安卓SOCKET 通信配置示列 <group name="Socket" on-off="on"> <attr name="SocketPort" 
+		value="8825" on-off="on" remark="Socket端口号，整数" /> <attr name="SocketPoolSizePerCPU" 
+		value="50" on-off="on" remark="Socket的单个CPU线程池大小，整数" /> <attr name="CommunicationClassPath" 
+		value="com.zty.asset_nsjy.mobile.Communication" on-off="on" /> </group> <group 
+		name="FacadeMethod4MobileBizFlag" on-off="on"> <attr name="BINDING_TO_CODE" 
+		value="com.zty.asset_nsjy.mobile.Communication.bindingToCode" on-off="on" 
+		/> <attr name="INVENTORY_SUCCESS" value="com.zty.asset_nsjy.mobile.Communication.inventorySuccess" 
+		on-off="on" /> </group> -->
+</cfg>
